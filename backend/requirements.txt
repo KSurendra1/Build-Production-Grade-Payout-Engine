@@ -1,4 +1,4 @@
-﻿amqp==5.3.1
+amqp==5.3.1
 asgiref==3.11.1
 billiard==4.2.4
 celery==5.6.3
@@ -7,7 +7,7 @@ click-didyoumean==0.3.1
 click-plugins==1.1.1.2
 click-repl==0.3.0
 colorama==0.4.6
-Django==6.0.4
+Django==5.2
 django-cors-headers==4.9.0
 django-environ==0.13.0
 djangorestframework==3.17.1
@@ -30,10 +30,3 @@ vine==5.1.0
 wcwidth==0.6.0
 requests==2.33.1
 gunicorn
-django
-djangorestframework
-celery
-redis
-psycopg2-binary
-gunicorn
-django-cors-headers
