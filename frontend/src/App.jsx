@@ -3,7 +3,10 @@ import axios from 'axios';
 import { Activity, CheckCircle, XCircle } from 'lucide-react';
 import { v4 as uuidv4 } from 'uuid';
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || '/api/v1';
+const DEFAULT_PROD_API_BASE = 'https://backend-api.onrender.com/api/v1';
+const API_BASE =
+  import.meta.env.VITE_API_BASE_URL ||
+  (import.meta.env.DEV ? '/api/v1' : DEFAULT_PROD_API_BASE);
 
 function App() {
   const [merchant, setMerchant] = useState(() => {
@@ -104,7 +107,11 @@ function App() {
       setInitialCreditInr('1000');
       setSuccess('Merchant created successfully.');
     } catch (err) {
-      setError(err.response?.data?.error || 'Failed to create merchant.');
+      setError(
+        err.response?.data?.error ||
+          err.message ||
+          'Failed to create merchant. Check API base URL configuration.'
+      );
     } finally {
       setMerchantLoading(false);
     }
@@ -151,7 +158,11 @@ function App() {
         setMerchant(null);
         setError('Merchant not found. Please create a merchant again.');
       } else {
-        setError(err.response?.data?.error || err.message || 'Failed to process payout.');
+        setError(
+          err.response?.data?.error ||
+            err.message ||
+            'Failed to process payout. Check API connectivity.'
+        );
       }
     } finally {
       setLoading(false);

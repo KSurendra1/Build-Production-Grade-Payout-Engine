@@ -12,6 +12,8 @@ Production-grade payout service with ledger integrity, lock-safe concurrency, id
 - API base: `http://127.0.0.1:8000/api/v1`
 - Frontend: `http://127.0.0.1:5173`
 
+For production frontend deployment, set `VITE_API_BASE_URL` to your live backend API base (example: `https://backend-api.onrender.com/api/v1`).
+
 ## API Endpoints
 - `POST /api/v1/merchants`
 - `GET /api/v1/merchants/{merchant_id}/balance`
