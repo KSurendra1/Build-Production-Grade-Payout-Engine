@@ -1,0 +1,20 @@
+ 
+ -------------- celery@ASuar v5.6.3 (recovery)
+--- ***** ----- 
+-- ******* ---- Windows-11-10.0.26200-SP0 2026-04-28 12:20:55
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         config:0x23579471160
+- ** ---------- .> transport:   redis://localhost:6379/0
+- ** ---------- .> results:     redis://localhost:6379/0
+- *** --- * --- .> concurrency: 8 (solo)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . payouts.tasks.process_payout
+  . payouts.tasks.retry_stuck_payouts
+

@@ -1,0 +1,5 @@
+[2026-04-28 12:20:55,141: INFO/MainProcess] Connected to redis://localhost:6379/0
+[2026-04-28 12:20:55,176: INFO/MainProcess] mingle: searching for neighbors
+[2026-04-28 12:20:56,253: INFO/MainProcess] mingle: sync with 1 nodes
+[2026-04-28 12:20:56,281: INFO/MainProcess] mingle: sync complete
+[2026-04-28 12:20:56,372: INFO/MainProcess] celery@ASuar ready.
