@@ -30,3 +30,10 @@ vine==5.1.0
 wcwidth==0.6.0
 requests==2.33.1
 gunicorn
+django
+djangorestframework
+celery
+redis
+psycopg2-binary
+gunicorn
+django-cors-headers
