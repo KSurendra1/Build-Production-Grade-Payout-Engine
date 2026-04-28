@@ -3,6 +3,7 @@ from pathlib import Path
 import environ
 import os
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1').split(',')
+CORS_ALLOW_ALL_ORIGINS = os.environ.get('CORS_ALLOW_ALL_ORIGINS', 'False') == 'True'
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
