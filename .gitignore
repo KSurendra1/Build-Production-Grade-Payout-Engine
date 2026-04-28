@@ -1,0 +1,4 @@
+# Celery beat runtime files
+backend/celerybeat-schedule
+backend/celerybeat-schedule-shm
+backend/celerybeat-schedule-wal
